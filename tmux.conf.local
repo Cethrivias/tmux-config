@@ -370,6 +370,9 @@ set -g mouse on
 # set -g prefix C-a
 # bind C-a send-prefix
 
+# christoomey/vim-tmux-navigator overrides ctrl+l. This give a way to still send the `clear` command
+bind C-l send-keys 'C-l'
+
 # if you don't want Oh my tmux! to alter a binding, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
 
@@ -416,6 +419,7 @@ tmux_conf_uninstall_plugins_on_reload=true
 #set -g @plugin 'tmux-plugins/tmux-cpu'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @continuum-restore 'on'
 set -g @resurrect-strategy-nvim 'session'
 
